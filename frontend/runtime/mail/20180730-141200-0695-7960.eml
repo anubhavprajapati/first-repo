@@ -1,0 +1,23 @@
+Message-ID: <6bc7bf0390cb9ed300d2fd853d24fbe9@192.168.0.173>
+Date: Mon, 30 Jul 2018 14:12:00 +0200
+Subject: Lorel Ipsum
+From: anubhavprajapati@cedcoss.com
+To: prajapati.anubhav07@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1532952720_a7fb7849ad4647c7130bae10f0416dc8_=_"
+
+
+--_=_swift_v4_1532952720_a7fb7849ad4647c7130bae10f0416dc8_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Mail sent successfully
+
+--_=_swift_v4_1532952720_a7fb7849ad4647c7130bae10f0416dc8_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<b>HTML content</b>
+
+--_=_swift_v4_1532952720_a7fb7849ad4647c7130bae10f0416dc8_=_--

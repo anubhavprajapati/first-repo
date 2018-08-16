@@ -1,0 +1,1674 @@
+2018-07-26 03:38:57 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-07-26 03:38:56 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'SSH_AGENT_PID' => '2027'
+    'XDG_SESSION_ID' => 'c1'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-I829La/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532575584.15652-1975830767'
+    'WINDOWID' => '71303172'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1741'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-I829La'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-w7Q9fBYfVjHb/agent.2026'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/2020,unix/cedcoss:/tmp/.ICE-unix/2020'
+    'USERNAME' => 'cedcoss'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'xfce'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'JOB' => 'dbus'
+    'PWD' => '/opt/lampp/htdocs/yii-application'
+    'GNOME_KEYRING_PID' => '1656'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/cedcoss'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-PqerxnzpG6'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '8'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'en_IN'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'xfce4-terminal'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532576336.8808
+    'REQUEST_TIME' => 1532576336
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 03:43:44 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-07-26 03:43:44 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'SSH_AGENT_PID' => '2027'
+    'XDG_SESSION_ID' => 'c1'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-I829La/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532575584.15652-1975830767'
+    'WINDOWID' => '71303172'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1741'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-I829La'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-w7Q9fBYfVjHb/agent.2026'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/2020,unix/cedcoss:/tmp/.ICE-unix/2020'
+    'USERNAME' => 'cedcoss'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'xfce'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'JOB' => 'dbus'
+    'PWD' => '/opt/lampp/htdocs/yii-application'
+    'GNOME_KEYRING_PID' => '1656'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/cedcoss'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-PqerxnzpG6'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '8'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'en_IN'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'xfce4-terminal'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532576624.6207
+    'REQUEST_TIME' => 1532576624
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 03:47:04 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-07-26 03:47:04 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'SSH_AGENT_PID' => '2027'
+    'XDG_SESSION_ID' => 'c1'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-I829La/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532575584.15652-1975830767'
+    'WINDOWID' => '71303172'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1741'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-I829La'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-w7Q9fBYfVjHb/agent.2026'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/2020,unix/cedcoss:/tmp/.ICE-unix/2020'
+    'USERNAME' => 'cedcoss'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'xfce'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'JOB' => 'dbus'
+    'PWD' => '/opt/lampp/htdocs/yii-application'
+    'GNOME_KEYRING_PID' => '1656'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/cedcoss'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-PqerxnzpG6'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '8'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'en_IN'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'xfce4-terminal'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532576824.3112
+    'REQUEST_TIME' => 1532576824
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 03:47:07 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-07-26 03:47:07 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'SSH_AGENT_PID' => '2027'
+    'XDG_SESSION_ID' => 'c1'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-I829La/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532575584.15652-1975830767'
+    'WINDOWID' => '71303172'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1741'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-I829La'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-w7Q9fBYfVjHb/agent.2026'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/2020,unix/cedcoss:/tmp/.ICE-unix/2020'
+    'USERNAME' => 'cedcoss'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'xfce'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'JOB' => 'dbus'
+    'PWD' => '/opt/lampp/htdocs/yii-application'
+    'GNOME_KEYRING_PID' => '1656'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/cedcoss'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-PqerxnzpG6'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '8'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'en_IN'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'xfce4-terminal'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532576827.6721
+    'REQUEST_TIME' => 1532576827
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 09:38:38 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-07-26 09:38:38 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'SSH_AGENT_PID' => '2027'
+    'XDG_SESSION_ID' => 'c1'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-I829La/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532575584.15652-1975830767'
+    'WINDOWID' => '41959897'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1741'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-I829La'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-w7Q9fBYfVjHb/agent.2026'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/2020,unix/cedcoss:/tmp/.ICE-unix/2020'
+    'USERNAME' => 'cedcoss'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'xfce'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'JOB' => 'dbus'
+    'PWD' => '/opt/lampp/htdocs/yii-application'
+    'GNOME_KEYRING_PID' => '1656'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/cedcoss'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-PqerxnzpG6'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '8'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'en_IN'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'xfce4-terminal'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532597918.2108
+    'REQUEST_TIME' => 1532597918
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 09:39:08 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysqli:host=loc...', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-07-26 09:39:08 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'SSH_AGENT_PID' => '2027'
+    'XDG_SESSION_ID' => 'c1'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-I829La/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532575584.15652-1975830767'
+    'WINDOWID' => '41959897'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1741'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-I829La'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-w7Q9fBYfVjHb/agent.2026'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/2020,unix/cedcoss:/tmp/.ICE-unix/2020'
+    'USERNAME' => 'cedcoss'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'xfce'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'JOB' => 'dbus'
+    'PWD' => '/opt/lampp/htdocs/yii-application'
+    'GNOME_KEYRING_PID' => '1656'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/cedcoss'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-PqerxnzpG6'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '8'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'en_IN'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'xfce4-terminal'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532597948.9092
+    'REQUEST_TIME' => 1532597948
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 09:39:10 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysqli:host=loc...', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-07-26 09:39:10 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'SSH_AGENT_PID' => '2027'
+    'XDG_SESSION_ID' => 'c1'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-I829La/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532575584.15652-1975830767'
+    'WINDOWID' => '41959897'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1741'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-I829La'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-w7Q9fBYfVjHb/agent.2026'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/2020,unix/cedcoss:/tmp/.ICE-unix/2020'
+    'USERNAME' => 'cedcoss'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'xfce'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'JOB' => 'dbus'
+    'PWD' => '/opt/lampp/htdocs/yii-application'
+    'GNOME_KEYRING_PID' => '1656'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/cedcoss'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-PqerxnzpG6'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '8'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'en_IN'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'xfce4-terminal'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532597950.3947
+    'REQUEST_TIME' => 1532597950
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 09:44:36 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-07-26 09:44:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'SSH_AGENT_PID' => '2027'
+    'XDG_SESSION_ID' => 'c1'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-I829La/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532575584.15652-1975830767'
+    'WINDOWID' => '41959897'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1741'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-I829La'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-w7Q9fBYfVjHb/agent.2026'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/2020,unix/cedcoss:/tmp/.ICE-unix/2020'
+    'USERNAME' => 'cedcoss'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'xfce'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'JOB' => 'dbus'
+    'PWD' => '/opt/lampp/htdocs/yii-application'
+    'GNOME_KEYRING_PID' => '1656'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/cedcoss'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-PqerxnzpG6'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '8'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'en_IN'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'xfce4-terminal'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532598276.0745
+    'REQUEST_TIME' => 1532598276
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 09:48:08 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-07-26 09:48:08 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'SSH_AGENT_PID' => '2027'
+    'XDG_SESSION_ID' => 'c1'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-I829La/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532575584.15652-1975830767'
+    'WINDOWID' => '41959897'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1741'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-I829La'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-w7Q9fBYfVjHb/agent.2026'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/2020,unix/cedcoss:/tmp/.ICE-unix/2020'
+    'USERNAME' => 'cedcoss'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'xfce'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'JOB' => 'dbus'
+    'PWD' => '/opt/lampp/htdocs/yii-application'
+    'GNOME_KEYRING_PID' => '1656'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/cedcoss'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-PqerxnzpG6'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '8'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'en_IN'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'xfce4-terminal'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532598488.6229
+    'REQUEST_TIME' => 1532598488
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 09:48:26 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)' in /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /opt/lampp/htdocs/yii-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /opt/lampp/htdocs/yii-application/yii(23): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-07-26 09:48:26 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'SSH_AGENT_PID' => '2027'
+    'XDG_SESSION_ID' => 'c1'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-I829La/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532575584.15652-1975830767'
+    'WINDOWID' => '41959897'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1741'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-I829La'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-w7Q9fBYfVjHb/agent.2026'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/2020,unix/cedcoss:/tmp/.ICE-unix/2020'
+    'USERNAME' => 'cedcoss'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'xfce'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'JOB' => 'dbus'
+    'PWD' => '/opt/lampp/htdocs/yii-application'
+    'GNOME_KEYRING_PID' => '1656'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/cedcoss'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-PqerxnzpG6'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'INSTANCE' => ''
+    'UPSTART_JOB' => 'startxfce4'
+    'WINDOWPATH' => '8'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'GLADE_CATALOG_PATH' => ':'
+    'MDM_LANG' => 'en_IN'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'xfce4-terminal'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532598506.5368
+    'REQUEST_TIME' => 1532598506
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-27 12:26:28 [-][-][-][error][yii\console\UnknownCommandException] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: migrate/update' in /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('update', Array)
+#1 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('update', Array)
+#2 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/update', Array)
+#3 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/update', Array)
+#4 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#5 /opt/lampp/htdocs/yii1/yii(23): yii\base\Application->run()
+#6 {main}
+
+Next exception 'yii\console\UnknownCommandException' with message 'Unknown command "migrate/update".' in /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/update', Array)
+#1 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /opt/lampp/htdocs/yii1/yii(23): yii\base\Application->run()
+#3 {main}
+2018-07-27 12:26:28 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'XDG_SESSION_ID' => 'c1'
+    'SSH_AGENT_PID' => '1944'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-mOPDxo/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532674307.356592-1188477073'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-mOPDxo'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1658'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-yft4sCrEZIVe/agent.1943'
+    'USERNAME' => 'cedcoss'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/1936,unix/cedcoss:/tmp/.ICE-unix/1936'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/opt/lampp/htdocs/yii1'
+    'JOB' => 'dbus'
+    'GNOME_KEYRING_PID' => '1582'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/cedcoss'
+    'XDG_SEAT' => 'seat0'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-7YNVPd51AL'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'WINDOWPATH' => '8'
+    'UPSTART_JOB' => 'startxfce4'
+    'TEXTDOMAIN' => 'im-config'
+    'INSTANCE' => ''
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'MDM_LANG' => 'en_IN'
+    'GLADE_CATALOG_PATH' => ':'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    'BASH_FUNC_generate_command_executed_sequence%%' => '() {  printf \'\\e\\7\'
+}'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532694388.6781
+    'REQUEST_TIME' => 1532694388
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/update'
+    ]
+    'argc' => 2
+]
+2018-07-28 06:52:58 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'Missing required arguments: name' in /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Controller.php:186
+Stack trace:
+#0 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('create', Array)
+#3 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#4 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#5 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#6 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /opt/lampp/htdocs/yii1/yii(23): yii\base\Application->run()
+#8 {main}
+2018-07-28 06:52:58 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'XDG_SESSION_ID' => 'c1'
+    'SSH_AGENT_PID' => '1842'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-ad6Ihj/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532756522.256833-2062401573'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-ad6Ihj'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1560'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-X28USz14BIO6/agent.1841'
+    'USERNAME' => 'cedcoss'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/1834,unix/cedcoss:/tmp/.ICE-unix/1834'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/opt/lampp/htdocs/yii1'
+    'JOB' => 'dbus'
+    'GNOME_KEYRING_PID' => '1484'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/cedcoss'
+    'XDG_SEAT' => 'seat0'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-FXV7Gzfsxd'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'WINDOWPATH' => '8'
+    'UPSTART_JOB' => 'startxfce4'
+    'TEXTDOMAIN' => 'im-config'
+    'INSTANCE' => ''
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'MDM_LANG' => 'en_IN'
+    'GLADE_CATALOG_PATH' => ':'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    'BASH_FUNC_generate_command_executed_sequence%%' => '() {  printf \'\\e\\7\'
+}'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532760778.5313
+    'REQUEST_TIME' => 1532760778
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+    ]
+    'argc' => 2
+]
+2018-07-28 13:08:38 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42000] [1049] Unknown database 'form'' in /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=127....', 'root', '', NULL)
+#1 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(241): yii\console\controllers\MigrateController->getMigrationHistory(1)
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionDown(1)
+#14 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#16 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('down', Array)
+#17 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('down', Array)
+#18 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#19 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#20 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /opt/lampp/htdocs/yii1/yii(23): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42000] [1049] Unknown database 'form'' in /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/controllers/MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(241): yii\console\controllers\MigrateController->getMigrationHistory(1)
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionDown(1)
+#12 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('down', Array)
+#15 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('down', Array)
+#16 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/down', Array)
+#17 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/down', Array)
+#18 /opt/lampp/htdocs/yii1/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /opt/lampp/htdocs/yii1/yii(23): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2018-07-28 13:08:38 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_VTNR' => '8'
+    'XDG_SESSION_ID' => 'c1'
+    'SSH_AGENT_PID' => '1842'
+    'SELINUX_INIT' => 'YES'
+    'SESSION' => 'xfce'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-ad6Ihj/gpg:0:1'
+    'GLADE_PIXMAP_PATH' => ':'
+    'XDG_MENU_PREFIX' => 'xfce-'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'XDG_SESSION_COOKIE' => '4dfc60b6f60a3bcd4a3aba1c5b21e3fe-1532756522.256833-2062401573'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-ad6Ihj'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1560'
+    'USER' => 'cedcoss'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'GLADE_MODULE_PATH' => ':'
+    'SSH_AUTH_SOCK' => '/tmp/ssh-X28USz14BIO6/agent.1841'
+    'USERNAME' => 'cedcoss'
+    'SESSION_MANAGER' => 'local/cedcoss:@/tmp/.ICE-unix/1834,unix/cedcoss:/tmp/.ICE-unix/1834'
+    'DEFAULTS_PATH' => '/usr/share/gconf/xfce.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-xfce:/usr/share/upstart/xdg:/etc/xdg:/etc/xdg'
+    'DESKTOP_SESSION' => 'xfce'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'GDM_XSERVER_LOCATION' => 'local'
+    'PWD' => '/opt/lampp/htdocs/yii1'
+    'JOB' => 'dbus'
+    'GNOME_KEYRING_PID' => '1484'
+    'LANG' => 'en_IN'
+    'MANDATORY_PATH' => '/usr/share/gconf/xfce.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'MDM_XSERVER_LOCATION' => 'local'
+    'GDMSESSION' => 'xfce'
+    'SESSIONTYPE' => ''
+    'SHLVL' => '1'
+    'HOME' => '/home/cedcoss'
+    'XDG_SEAT' => 'seat0'
+    'LANGUAGE' => 'en_IN:en'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started xsession'
+    'XDG_SESSION_DESKTOP' => 'xfce'
+    'LOGNAME' => 'cedcoss'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-FXV7Gzfsxd'
+    'XDG_DATA_DIRS' => '/usr/share/xfce:/usr/share/xfce4:/usr/local/share/:/usr/share/:/usr/share/mdm/:/usr/share'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'MDMSESSION' => 'xfce'
+    'WINDOWPATH' => '8'
+    'UPSTART_JOB' => 'startxfce4'
+    'TEXTDOMAIN' => 'im-config'
+    'INSTANCE' => ''
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0.0'
+    'MDM_LANG' => 'en_IN'
+    'GLADE_CATALOG_PATH' => ':'
+    'XDG_CURRENT_DESKTOP' => 'XFCE'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'XAUTHORITY' => '/home/cedcoss/.Xauthority'
+    'BASH_FUNC_generate_command_executed_sequence%%' => '() {  printf \'\\e\\7\'
+}'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532783318.8251
+    'REQUEST_TIME' => 1532783318
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/down'
+    ]
+    'argc' => 2
+]
